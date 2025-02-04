@@ -2,11 +2,9 @@ include("../GenerateMatrix/GenerateMatrix.jl")
 
 function create_syk2(basis, L, N)
 
-    # t = create_random_matrix(L, 2/L, 1/L)
-    # jldsave("syk2_matrix.jld2"; t)
+    t = create_random_matrix(L, 2/L, 1/L)
+    
 
-    data = load("./syk2_matrix.jld2")  # Load the entire file
-    t = data["t"] 
     H = generate_matrix(basis, t, L)
     return H
     # size_estimate = binomial(L, N) * L^2

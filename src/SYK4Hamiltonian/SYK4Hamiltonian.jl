@@ -41,11 +41,7 @@ function create_syk4(basis, L, N)
     cols = Vector{Int64}(undef, size_estimate)
     vals = Vector{Float64}(undef, size_estimate)
 
-    # Uijkm = create_tensor(L)
-    # jldsave("./syk4_matrix.jld2"; Uijkm)
-    
-    data = load("./syk4_matrix.jld2")  # Load the entire file
-    Uijkm = data["Uijkm"] 
+    Uijkm = create_tensor(L)
 
     count = 1
     # col = 1
