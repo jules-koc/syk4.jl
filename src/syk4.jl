@@ -1,5 +1,16 @@
 module syk4
 
-# Write your package code here.
+using Random, SparseArrays, LinearAlgebra, BenchmarkTools, Combinatorics, PyPlot, DelimitedFiles, JLD2
 
-end
+
+include("BasisCreation/BasisCreation.jl")
+include("Operators/Operators.jl")
+include("UsefullFunctions/UsefullFunctions.jl")
+include("SYK2Hamiltonian/SYK2Hamiltonian.jl")
+include("SYK4Hamiltonian/SYK4Hamiltonian.jl")
+include("NonGaussianityCheck/NonGaussianityCheck.jl")
+include("GenerateMatrix/GenerateMatrix.jl")
+
+
+   
+end 
